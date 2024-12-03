@@ -1,0 +1,120 @@
+<HTML><HEAD><link rel="canonical" href="https://www.dosprn.com/codepages.htm" /><TITLE>DOSPRN 2.0 codepages list and code page files format</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=utf-8">
+<META name=Keywords content="dos printer driver, dos code, dos codepages, dos codepages, dos printer, dos usb driver, dos print command, DOS, printers, program, print, printer, USB, programs, LPT, DOS program, software, national, language, internanional">
+<META name=Description content="DOSPRN allow to use your old favorite DOS program with new printers. DOSPRN emulates many code pages">
+<meta name=viewport content="width=device-width, initial-scale=1">
+
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "ajnahusunj");
+</script>
+</head>
+<BODY background=images/bg2.jpg>
+<DIV align=center>
+<TABLE cellSpacing=0 cellPadding=6 width=50% style="max-width:640px" border=0>
+  <TR>
+    <TD width=100%>
+      <div style="float:left"><IMG src="images/logo.gif" ALT="DOS USB print under Windows 8, Windows 7, Windows XP, Windows2000, Windows98"> <font size="5"><b>&nbsp;DOSPRN&nbsp;2.0&nbsp;</b></font></div>
+  
+      <table border="2" bgcolor="#C0C0C0" cellpadding="4" cellspacing="4">
+        <tr>
+          <td><a href="https://www.dosprn.com"><img src="images/gb.png" align="center" width="30" height="20" alt="Dos print international support center DOSPRN" border=0></a></td>
+                    <td><a href="https://spanish.dosprn.com" id="spanish"><img src="images/es.png" width="30" height="20" alt="Spanish dos print support center" align="center" border="0"></a></td>
+          <td><a href="https://portuguese.dosprn.com/" id="portuguese"><img src="images/pt.png" width="30" height="20" alt="Portuguese DOSPRN support" align="center" border="0"></a></td>
+          <td><a href="https://ukrainian.dosprn.com" id="ukrainian"><img src="images/ua.png" width="30" height="20" alt="DOSPRN Ukrainian dos print support center" align="center" border="0"></a></td>
+          <td><a href="https://polska.dosprn.com"><img src="images/pl.png" width="30" height="20" alt="Dosprinter Polish support center" align="center" border="0"></a></td>
+          <td><a href="https://dosprn.co.il"><img src="images/il.png" width="30" height="20" alt="DOSPRN Israel dos usb support center" align="center" border="0"></a></td>
+          <td><a href="https://bkltd.com/dosprn/"><img src="images/bg.png" width="30" height="20" alt="DOSPRN Bulgaria dos print support center" align="center" border="0"></a></td>
+          <td><a href="https://indonesian.dosprn.com"><img src="images/id.png" width="30" height="20" alt="Indonesian DOSPRN support center" align="center" border="0"></a></td>
+          <td><a href="https://dosprn.in"><img src="images/in.png" width="30" height="20" alt="Indian DOSPRN support" align="center" border="0"></a></td>
+
+        </tr>
+      </table>
+			
+</TD></TR>
+  <TR>
+<TD align=middle width="100%" style="line-height:1.5">
+      <HR><font size="+1">
+      <A href="dos-print.htm">About</A> &nbsp;||&nbsp; <A 
+      href="readme.htm">Manual</A> &nbsp;||&nbsp; <A href="news.htm">What's New</A> &nbsp;||&nbsp; <A 
+      href="download.htm"><img src="images/new.png" alt="DOSPRN 2.0 pre-release" />Download</A> &nbsp;||&nbsp; <A href="vox.htm">Vox populi</A> &nbsp;||&nbsp; <A href="order.htm">Order</A> &nbsp;||&nbsp; <A
+      href="faq.htm">FAQ</A> &nbsp;||&nbsp; <A href="story.htm">Story</A> &nbsp;||&nbsp; <A href="mailto:support&#064dosprn.com?Subject=DOSPRN&#032support">
+      Support</A> &nbsp;||&nbsp; <A href="login.htm">Login</A>
+      </font><HR>
+    </TD></TR>
+  <TR>
+    <TD width="100%">
+<H1>Codepage module description</H1>
+<P>DOSPRN supports various codepages. At present, 852 (East Europe), 850 (West Europe), 737 (Greece), 437 (USA),
+857 (Turkish), 862 (Hebrew), 775 (Latvian), 1125 (Ukrainian), 855 (Cyrillic), 866 (Russian), 874 (Thai), 932 (Japan),
+949 (Korean), 936 (Simplified Chinese) and 950 (Traditional Chinese) codepages are supported.</P>
+<P>Moreover, users can create another codepage support module. Each language module is a text file with <B>.CP</B> or <B>.CPX</B> extension.</P>
+<P>Now DOSPRN supports two formats of codepage modules: <a href="#cp">"old" .CP format</a> for single-byte codepages only and <a href="#cpx">"new" .CPX format</a> for multi-byte and single-byte codepages</P>
+
+          <hr>
+<a name="list"></a><H4>List of codepage modules</H4>
+
+Now DOSPRN keeps names of code page modules in the separate file <b>&quot;codepages.lst&quot;</b>. This file contains short names and long descriptions
+of each code page on separate lines. For example
+<PRE><B><I>
+437=USA (DOS OEM)
+737=Greek (DOS OEM)
+771=Lithuanian (DOS OEM)
+775=Baltic (DOS OEM)
+</I></B></PRE>
+
+          <hr>
+
+<a name="cp"></a><H4>CP codepage module specification</H4>
+<P>This file includes the strings of the below type:</P><PRE><B><I>ascii_letter=unicode</I></B></PRE>
+<P>In this example, &quot;ascii_letter" is a standard DOS symbol. Since the first half of ASCII table (codes from 0 through 127) contains the non-printable symbols, Roman letters, signs and numbers, we recommend that you specify only the second half of ASCII table (codes from 128 through 255).</P>
+<P>This part of the table usually contains letters of a national alphabet. Their tracing is determined by the type of codepage that you use in DOS. You should find the appropriate letter in the Unicode table and write its code after equals sign. You can write a Unicode number both in decimal and hexadecimal format. In the second case, the number must be preceded with the "$" sign.</P>
+<P>For example, you can describe the "<b>?</b>" symbol as <b>?=$3F</b> or <b>?=63</b>.</P>
+<P>In case ASCII letters and Unicode letters follow one by one, you can use more compact form</P><PRE><B><I>ascii_letter1..ascii_letter2=unicode1..unicode2</I></B></PRE>
+<P>where "letter1..letter2" are a range of DOS letters and "unicode1..unicode2" are a range of corresponding
+Unicode symbols.</P>
+
+          <hr>
+
+<a name="cpx"></a><H4>CPX codepage module specification</H4>
+
+<P>This file includes the strings with tab seprated columns of the below type:</P><PRE><B><I>ascii_hex_code&lt;tab&gt;unicode_hex_code</I></B></PRE>
+
+<P>In this example, &quot;ascii_hex_code" is a code of DOS symbol in hex 0xXX (for single-byte symbols) or 0xXXXX (for double-byte symbols).
+Also lines can contain comments preceded with the '#' sign.</P>
+<P>This part of the table usually contains letters of a national alphabet. Their tracing is determined by the type of codepage that you use in DOS.</P>
+<P>For example, you can describe the <b>"&pound;"</b> symbol in CP437 as 0x9C&lt;tab&gt;0x00A3.</P>
+
+          <hr>
+
+<P>You can copy any language module file to a new file (but with the same extension) and open it in text editor (Notepad or similar, don't use Windows Word instead). 
+Then you can modify the Unicode strings and save this file.</P>
+<P>After you've done the codepage file updating, you should add new code page description in the <a href="#list"><b>&quot;codepages.lst&quot;</b></a> file and
+restart DOSPRN. Your codepage module will be loaded.</P>&nbsp;</TD></TR>
+<TR>
+    <TD align=middle width="100%" style="line-height:1.5">
+      <HR><font size="+1">
+      <A href="dos-print.htm">About</A> &nbsp;||&nbsp; <A 
+      href="readme.htm">Manual</A> &nbsp;||&nbsp; <A href="news.htm">What's New</A> &nbsp;||&nbsp; <A 
+      href="download.htm">Download 
+      </A> &nbsp;||&nbsp;  <A href="vox.htm">Vox populi</A> &nbsp;||&nbsp; <A
+      href="order.htm">Order</A> &nbsp;||&nbsp; <A href="faq.htm">FAQ</A> &nbsp;||&nbsp; <A href="story.htm">Story</A> &nbsp;||&nbsp; <A 
+      href="mailto:support&#064dosprn.com?Subject=DOSPRN&#032support">Support</A> &nbsp;||&nbsp; 
+      <A href="login.htm">Login</A>
+      </FONT>
+      <HR>
+</TD></TR></TABLE></DIV>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-39647417-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-39647417-1');
+  gtag('config', 'AW-998639417');
+</script>
+<script>(function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"137005363"};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");</script>
+</body></html>

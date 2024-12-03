@@ -1,0 +1,6 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://www.dosprn.com/sitemap.xml.gz
+
+Sitemap: https://online.webceo.com/submission/smaps/c46a8b1d.xml.gz

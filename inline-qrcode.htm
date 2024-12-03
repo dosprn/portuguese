@@ -1,0 +1,114 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<link rel="canonical" href="https://www.dosprn.com/inline-qrcode.htm" />
+<TITLE>DOSPRN 2.0 inline qrcode allows to create QR-codes</TITLE>
+<META http-equiv=Content-Language content=en-us>
+<META http-equiv=Content-Type content="text/html; charset=utf-8">
+<META name=Keywords  content="inline qrcode, DOS report bitmap, dos print command, DOS, printers, program, print, printer, USB, programs, LPT, DOS program, software, national, language, qr-code" >
+<META name=Description content="DOSPRN allows to generate and insert QR-codes into DOS reports and generate them from the command line">
+<meta name=viewport content="width=device-width, initial-scale=1">
+
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "ajnahusunj");
+</script>
+</head>
+<BODY background=images/bg2.jpg>
+<DIV align=center>
+<CENTER>
+<TABLE cellSpacing=0 cellPadding=6 width=50% style="max-width:640px" border=0>
+  <TR>
+    <TD width=100%>
+      <div style="float:left"><IMG src="images/logo.gif" ALT="DOS USB print under Windows 11, Windows 10, Windows 8, Windows 7, Windows XP, Windows2000, Windows98"> <font size="5"><b>&nbsp;DOSPRN&nbsp;2.0&nbsp;</b></font></div>
+  
+      <table border="2" bgcolor="#C0C0C0" cellpadding="4" cellspacing="4">
+        <tr>
+          <td><a href="https://www.dosprn.com"><img src="images/gb.png" align="center" width="30" height="20" alt="Dos print international support center DOSPRN" border=0></a></td>
+                    <td><a href="https://spanish.dosprn.com" id="spanish"><img src="images/es.png" width="30" height="20" alt="Spanish dos print support center" align="center" border="0"></a></td>
+          <td><a href="https://portuguese.dosprn.com/" id="portuguese"><img src="images/pt.png" width="30" height="20" alt="Portuguese DOSPRN support" align="center" border="0"></a></td>
+          <td><a href="https://ukrainian.dosprn.com" id="ukrainian"><img src="images/ua.png" width="30" height="20" alt="DOSPRN Ukrainian dos print support center" align="center" border="0"></a></td>
+          <td><a href="https://polska.dosprn.com"><img src="images/pl.png" width="30" height="20" alt="Dosprinter Polish support center" align="center" border="0"></a></td>
+          <td><a href="https://dosprn.co.il"><img src="images/il.png" width="30" height="20" alt="DOSPRN Israel dos usb support center" align="center" border="0"></a></td>
+          <td><a href="https://bkltd.com/dosprn/"><img src="images/bg.png" width="30" height="20" alt="DOSPRN Bulgaria dos print support center" align="center" border="0"></a></td>
+          <td><a href="https://indonesian.dosprn.com"><img src="images/id.png" width="30" height="20" alt="Indonesian DOSPRN support center" align="center" border="0"></a></td>
+          <td><a href="https://dosprn.in"><img src="images/in.png" width="30" height="20" alt="Indian DOSPRN support" align="center" border="0"></a></td>
+
+        </tr>
+      </table>
+			
+</TD></TR>
+  <TR>
+<TD align=middle width="100%" style="line-height:1.5">
+      <HR><font size="+1">
+      <A href="dos-print.htm">About</A> &nbsp;||&nbsp; <A 
+      href="readme.htm">Manual</A> &nbsp;||&nbsp; <A href="news.htm">What's New</A> &nbsp;||&nbsp; <A 
+      href="download.htm"><img src="images/new.png" alt="DOSPRN 2.0 pre-release" />Download</A> &nbsp;||&nbsp; <A href="vox.htm">Vox populi</A> &nbsp;||&nbsp; <A href="order.htm">Order</A> &nbsp;||&nbsp; <A
+      href="faq.htm">FAQ</A> &nbsp;||&nbsp; <A href="story.htm">Story</A> &nbsp;||&nbsp; <A href="mailto:support&#064dosprn.com?Subject=DOSPRN&#032support">
+      Support</A> &nbsp;||&nbsp; <A href="login.htm">Login</A>
+      </font><HR>
+    </TD></TR>
+  <TR>
+    <TD width="100%">
+      <H1>Inline QR-code Files</H1>
+	<p>Current DOSPRN version could create QR-codes from the data files and print them as a part of reports.</p>
+
+	<h4>Escape commands could have a format</h4>
+
+<code>
+ESC~7;ZZ;"qrcode raw text" - print a QR code from the raw text<br><br>
+ESC~8;ZZ;"filename.txt" - print the QR code from the file in UTF-8<br><br>
+ESC~9;ZZ;"filename.txt" - print a QR code from the file with the same code page as the main report<br><br>
+where ZZ - is a zoom factor<br>
+</code>
+
+	<h4>This is a part of a demo program in the BASIC syntax includes sample QR-code file into the document:</h4>
+<textarea cols="80" rows="13">
+LPRINT "TEST QRCODE PRINTING"
+LPRINT ""
+LPRINT "TEXT OVER QRCODE"
+LPRINT "TEXT LEFT" + CHR$(27)+"~9;20;"+CHR$(34)+"C:\TEMP\qrcode.txt"+CHR$(34)
+LPRINT "TEXT LEFT                       TEXT RIGHT"
+LPRINT "TEXT LEFT                       TEXT RIGHT"
+LPRINT "TEXT LEFT                       TEXT RIGHT"
+LPRINT "TEXT LEFT                       TEXT RIGHT"
+LPRINT "TEXT LEFT                       TEXT RIGHT"
+LPRINT "TEXT LEFT                       TEXT RIGHT"
+LPRINT "TEXT LEFT                       TEXT RIGHT"
+LPRINT "TEXT UNDER QRCODE"</textarea>
+	<h4>Result of printing this document with DOSPRN support is here:</h4>
+
+<IMG src="images/dosprn_qr_code.png" ALT="Sample of a report with inline qrcode">
+
+
+</TD></TR>
+  <TR>
+    <TD align=middle width="100%" style="line-height:1.5">
+      <HR><font size="+1">
+      <A href="dos-print.htm">About</A> &nbsp;||&nbsp; <A 
+      href="readme.htm">Manual</A> &nbsp;||&nbsp; <A href="news.htm">What's New</A> &nbsp;||&nbsp; <A 
+      href="download.htm">Download 
+      </A> &nbsp;||&nbsp;  <A href="vox.htm">Vox populi</A> &nbsp;||&nbsp; <A
+      href="order.htm">Order</A> &nbsp;||&nbsp; <A href="faq.htm">FAQ</A> &nbsp;||&nbsp; <A href="story.htm">Story</A> &nbsp;||&nbsp; <A 
+      href="mailto:support&#064dosprn.com?Subject=DOSPRN&#032support">Support</A> &nbsp;||&nbsp; 
+      <A href="login.htm">Login</A>
+      </FONT>
+      <HR>
+    </TD></TR>
+
+<tr><td>
+</td></tr>
+</TABLE></CENTER></DIV>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-39647417-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-39647417-1');
+  gtag('config', 'AW-998639417');
+</script>
+<script>(function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"137005363"};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");</script>
+</body></html>
