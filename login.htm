@@ -1,7 +1,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <HTML><HEAD><link rel="canonical" href="https://www.dosprn.com/login.htm" /><TITLE>DOSPRN 2.0 registered users login</TITLE>
 <META http-equiv=Content-Language content=en-us>
-<META http-equiv=Content-Type content="text/html; charset=windows-1252">
+<META http-equiv=Content-Type content="text/html; charset=utf-8">
 <META name=Keywords  content="dos printer driver, dos printer, dos usb driver, dos print command, DOS, printers, program, print, printer, USB, programs, LPT, DOS program, software, national, language, internanional" >
 <META name=Description  content="DOSPRN customers could contact dos print support team via email. Usually we answer messages during 24 hours." >
 <meta name=viewport content="width=device-width, initial-scale=1">
@@ -102,13 +102,13 @@ input {
   <TR>
     <TD width="100%">
       <H1>Login</H1>
-      <h3>This is an online key generation service for registered users.&nbsp;</h3>
-	To obtain a license key, you need to indicate:
-      <ul><li> the number of the DOSPRN order and</li>
-	 <li>the email address specified when purchasing the license.</li></ul>
-         You also need to specify a unique registration code:
-         <ul><li>open the main  DOSPRN window</li>
-	<li>click on the 'Registration' button and copy data from the 'Code' field</li></ul>
+      <h3>Este é um serviço de geração de chaves online para usuários registrados.</h3>
+	Para obter uma chave de licença, você precisa indicar:
+      <ul><li>o número da encomenda DOSPRN e</li>
+	 <li>o endereço de e-mail especificado ao comprar a licença.</li></ul>
+         Você também precisa especificar um código de registro exclusivo:
+         <ul><li>abra a janela principal do DOSPRN</li>
+	<li>clique no botão 'Registro' e copie os dados do campo 'Código'</li></ul>
       <P>
 
 <script>
@@ -201,23 +201,23 @@ function ReqEnabled() {
 
     <form id="form" onsubmit="return false;">
         <b>
-	<label for="order">* Order number (required)</label><br>
-        <input placeholder="Your order number" type="text" id="order" name="order" size="80" oninput="ReqEnabled()"><br><br>
+	<label for="order">* Número do pedido (obrigatório)</label><br>
+        <input placeholder="O número do seu pedido" type="text" id="order" name="order" size="80" oninput="ReqEnabled()"><br><br>
 
-	<label for="email">* Email (required)</label><br>
-        <input placeholder="Registered email address" type="email" id="email" name="email" size="80" oninput="ReqEnabled()"><br><br>
+	<label for="email">* E-mail (obrigatório)</label><br>
+        <input placeholder="Endereço de e-mail registrado" type="email" id="email" name="email" size="80" oninput="ReqEnabled()"><br><br>
 
-	<label for="code">* Registration code (required)</label><br>
-        <input placeholder="Registration code from your computer" type="text" id="code" name="code" size="80" oninput="ReqEnabled()"><br><br>
+	<label for="code">* Código de registro (obrigatório)</label><br>
+        <input placeholder="Código de registro do seu computador" type="text" id="code" name="code" size="80" oninput="ReqEnabled()"><br><br>
 
-        <input type="radio" id="new" name="mode" value="NEW" checked onchange="chMode()"><label for="new">&nbsp;Get a new prepaid key</label><br>
-        <input type="radio" id="replace" name="mode" value="REPLACE" onchange="chMode()"><label for="replace">&nbsp;Replace the existing key</label><br>
+        <input type="radio" id="new" name="mode" value="NEW" checked onchange="chMode()"><label for="new">&nbsp;Obtenha uma nova chave</label><br>
+        <input type="radio" id="replace" name="mode" value="REPLACE" onchange="chMode()"><label for="replace">&nbsp;Pré-paga substitua a chave existente</label><br>
 	</b>
 	<div style="display:none" id="replacediv">
-	<p>You need to specify the previous license key if you want to get a replacement instead of a previously issued one.</p>
+	<p>Você precisa especificar a chave de licença anterior se quiser obter uma substituição em vez de uma emitida anteriormente.</p>
         <b>
-	<label for="key" id="keyid">* Old license key (required)</label><br>
-        <input placeholder="Old registration key" type="text" id="key" name="key" size="80"><br><br></div>
+	<label for="key" id="keyid">* Chave de licença antiga (obrigatória)</label><br>
+        <input placeholder="Chave de registro antiga" type="text" id="key" name="key" size="80"><br><br></div>
         </b>
     </form>
 
@@ -233,11 +233,11 @@ function ReqEnabled() {
 	<label for="newkey" id="newkeylbl"></label>
 	<button onclick="CopyKey('newkey')" id="newkeyclp">Copy to clipboard</button><br>
         <input placeholder="New registration key" type="text" id="newkey" name="newkey" size="80" readonly="readonly"><br><br>
-	<label for="newkey" id="newkeylbl2">Place this key in the appropriate field in the "Registration" window and press the "Ok" button. Please take into account you have to enter the key as shown above, with hyphens.</label><br>
+	<label for="newkey" id="newkeylbl2">Coloque esta chave no campo apropriado da janela “Registo” e pressione o botão “Ok”. Lembre-se de que deve introduzir a chave como mostrado acima, com hífens.</label><br>
 	</div>
 
 	</b></P>
-      If you're having trouble you can <A href="mailto:support@dosprn.com?Subject=DOSPRN%20LICENSE%20KEY">contact me</A> via email.<P></TD></TR>
+      Se você estiver tendo problemas, pode <A href="mailto:support@dosprn.com?Subject=DOSPRN%20LICENSE%20KEY">entrar em contato comigo</A> por e-mail.<P></TD></TR>
   <TR>
     <TD align=middle width="100%" style="line-height:1.5">
       <HR><font size="+1">
